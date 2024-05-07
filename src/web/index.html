@@ -6,7 +6,7 @@
     <title>Cloudflare Report Form</title>
     <style>
       body {
-        background-color: #1e2233;
+        background-color: #0a0a0a;
         color: #f0f0f0;
         font-family: Arial, sans-serif;
         display: flex;
@@ -21,7 +21,7 @@
         width: 400px;
         padding: 20px;
         border-radius: 8px;
-        background-color: #343434;
+        background-color: #171717;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       }
 
@@ -42,13 +42,13 @@
         margin-bottom: 15px;
         border: 1px solid #555;
         border-radius: 4px;
-        background-color: #444;
+        background-color: #404040;
         color: #fff;
         ox-sizing: border-box;
       }
 
       input[type="password"] {
-        background-color: #444;
+        background-color: #404040;
         color: #fff;
       }
 
@@ -72,7 +72,7 @@
     <form action="/report" method="post">
       <h1>Cloudflare Report Form</h1>
       <label for="url">URL:</label>
-      <input type="text" id="url" name="url" />
+      <input type="text" id="url" name="url" placeholder="exampledomain.tld" />
       <label for="justification">Justification:</label>
       <textarea id="justification" name="justification"></textarea>
       <input type="password" name="password" placeholder="Password" />
