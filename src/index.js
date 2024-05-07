@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 
 const PORT = process.env.PORT || 3000;
 
-const C = {
+const CF = {
   submitter: {
     name: process.env.CFAPI_SUBMITTER,
     email: process.env.CFAPI_SUBMITTER_EMAIL,
@@ -20,7 +20,7 @@ const C = {
 
 app.post("/report", async (req, res) => {
   try {
-    if (req.body.password !== C.password) {
+    if (req.body.password !== CF.password) {
       return res.send(":(");
     }
 
@@ -29,7 +29,7 @@ app.post("/report", async (req, res) => {
       return res.status(400).send("Invalid input");
     }
 
-    const R = new Report(url, C.submitter, justification);
+    const R = new Report(url, CF.submitter, justification);
     const response = await R.report();
     console.log("steamphishingreporting", url);
     console.log(response);
@@ -41,7 +41,9 @@ app.post("/report", async (req, res) => {
   }
 });
 
-// Basic web UI
+// Very basic web UI for making the request to the API
+// from a "human-friendly" (?) interface that you can
+// self-host or whatever, for your friends and family.
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "web/index.html"));
 });

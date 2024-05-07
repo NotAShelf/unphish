@@ -6,8 +6,8 @@
     <title>Cloudflare Report Form</title>
     <style>
       body {
-        background-color: #222; /* Dark background */
-        color: #fff; /* White text */
+        background-color: #1e2233;
+        color: #f0f0f0;
         font-family: Arial, sans-serif;
         display: flex;
         justify-content: center;
@@ -16,47 +16,55 @@
         margin: 0;
         padding: 0;
       }
+
       form {
         width: 400px;
         padding: 20px;
         border-radius: 8px;
-        background-color: #333; /* Darker form background */
+        background-color: #343434;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       }
+
       h1 {
         text-align: center;
       }
+
       label {
         margin-top: 10px;
         display: block;
       }
+
       input,
       textarea {
-        width: 100%;
-        padding: 8px;
+        width: calc(100% - 20px);
+        padding: 10px;
         margin-top: 5px;
         margin-bottom: 15px;
-        border: 1px solid #555; /* Darker border */
+        border: 1px solid #555;
         border-radius: 4px;
-        background-color: #444; /* Darker input background */
-        color: #fff; /* White text */
+        background-color: #444;
+        color: #fff;
+        ox-sizing: border-box;
       }
+
       input[type="password"] {
-        background-color: #444; /* Darker input background */
-        color: #fff; /* White text */
+        background-color: #444;
+        color: #fff;
       }
+
       button {
         width: 100%;
         padding: 10px;
         border: none;
         border-radius: 4px;
-        background-color: #007bff; /* Cloudflare blue */
-        color: #fff; /* White text */
+        background-color: #007bff;
+        color: #fff;
         cursor: pointer;
         transition: background-color 0.3s;
       }
+
       button:hover {
-        background-color: #0056b3; /* Darker blue on hover */
+        background-color: #0056b3;
       }
     </style>
   </head>
